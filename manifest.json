@@ -1,0 +1,26 @@
+{
+  "name": "html2image-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server exposing an HTML-to-Image conversion tool via stdio or HTTP.",
+  "type": "mcp",
+  "entry_point": "html2image-mcp-server.js",
+  "capabilities": { "tools": true, "resources": false, "contexts": false },
+  "tools": [{
+    "name": "html2image",
+    "description": "Convert HTML, URL, or document file (.html/.doc/.docx) to image (png/jpeg/webp)",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "html": { "type": "string" },
+        "url": { "type": "string" },
+        "filePath": { "type": "string" },
+        "format": { "type": "string", "enum": ["png", "jpeg", "webp"], "default": "png" },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "waitFor": { "type": ["string", "number"] }
+      }
+    }
+  }],
+  "server": { "stdio": true, "http": { "default_port": 3000 } },
+  "dependencies": { "@modelcontextprotocol/server": "^1.0.0" }
+}
