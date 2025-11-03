@@ -198,8 +198,8 @@ class HTMLToImageHttpServer {
     let page;
     try {
       page = await this.browser.newPage();
-      const width = args.width || 1200;
-      const height = args.height || 800;
+      const width = args.width >> 0 || 1200;
+      const height = args.height >> 0 || 800;
       
       await page.setViewport({ width, height });
 
