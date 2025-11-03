@@ -25,17 +25,11 @@ pnpm run start:http
 
 
 
-/Users/keith/Desktop/n8n/html2image-mcp-server/html2image-mcp-server.js
 
 
-curl -X POST http://localhost:3000/rpc \
+curl -X POST http://localhost:3000/convert \
   -H "Content-Type: application/json" \
   -d '{
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "tools/call",
-        "params": {
-          "name": "html2image",
-          "arguments": { "html": "<h1>Hello HTTP MCP</h1>" }
-        }
-      }'
+    "html": "<h1>Hello World</h1>",
+    "fileName": "test_document"
+  }'

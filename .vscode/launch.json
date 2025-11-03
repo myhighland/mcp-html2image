@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug MCP Server (stdio)",
+      "program": "${workspaceFolder}/html2image-mcp-server.js",
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug MCP Server (HTTP)",
+      "program": "${workspaceFolder}/html2image-mcp-server.js",
+      "args": ["--http"],
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "env": {
+        "PORT": "3000"
+      }
+    }
+  ]
+}
