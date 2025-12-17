@@ -96,8 +96,8 @@ npm start
   "mcpServers": {
     "html-to-image": {
       "command": "node",
-      "args": ["C:/Users/shidingye/Desktop/autohome/mcp/build/index.js"],
-      "cwd": "C:/Users/shidingye/Desktop/autohome/project"
+      "args": ["xxxx/build/index.js"],
+      "cwd": "xxxx"
     }
   }
 }
